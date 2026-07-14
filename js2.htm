@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ceki{width: 90px; height: 14px; border-radius: 5px; border: none; border: 1px solid silver; padding: 10px;}
+        #boy {width: 90px; height: 14px; border-radius: 5px; border: none; border: 1px solid silver; padding: 10px;}
+        #btn{width: 100px; height: 20px; border: none; border: 1px solid silver; border-radius: 20px; padding: 20px; display: flex; justify-content: center; align-items: center; cursor: pointer; background-color: bisque;}
+    </style>
+</head>
+<body>
+
+<input type="text" id="ceki" placeholder="kq"> <br><br>
+<input type="text" id="boy" placeholder="m"> <br><br>
+<button id="btn" onclick="hesab()">Hesabla</button>
+<h1 id="yoxla"></h1>
+
+    <script>
+        let a = document.getElementById('ceki')
+        let b = document.getElementById('boy')
+        let neticeyeri = document.getElementById('yoxla')
+
+        function hesab () {
+
+            let ceki = (a.value)
+            let boy = (b.value)
+            let bmi = ceki / (boy * boy);
+
+            if (bmi < 18.5) {
+            neticeyeri.innerText = 'Ariq'
+            }
+
+            else if (bmi < 25) {
+            neticeyeri.innerText = 'Normal'
+            }
+
+            else if (bmi < 30 ){
+            neticeyeri.innerText = 'Artiq cekili'
+            }
+
+            else {
+                neticeyeri.innerText = 'Piylenme'
+            }
+        }
+    </script>
+</body>
+</html>

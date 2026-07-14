@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ay {border: 1px solid silver; width: 160px; height: 30px; border-radius: 5px; text-align: center; background-color: aquamarine; outline: none;}
+        #btn {width: 120px; border: none; height: 40px; border-radius: 20px; background-color: rgb(175, 224, 224); cursor: pointer; }
+    </style>
+</head>
+<body> 
+    <input type="text" id="ay" placeholder="Ayin nomresi (1-12)"> <br><br>
+    <button onclick="tap()" id="btn">Fesli tap</button>
+    <h2 id="fesilnetice"></h2>
+    <script>
+        let ay = document.getElementById('ay')
+        let neticeyeri = document.getElementById('fesilnetice')
+
+        function tap () {
+            let ainput = Number(ay.value)
+
+
+            if (ainput < 1 || ainput > 12){
+            neticeyeri.innerText = 'Yanlış ay'
+            }
+
+            
+            else if (ainput === 12 || ainput === 1 || ainput === 2){
+            neticeyeri.innerText = 'Qış'
+            }
+
+            else if (ainput === 3 || ainput === 4 || ainput === 5) {
+                neticeyeri.innerText = 'Yaz'
+            }
+
+            else if (ainput === 6 || ainput === 7 || ainput === 8) {
+                neticeyeri.innerText = 'Yay'
+            }
+
+            
+            else {
+                neticeyeri.innerText = 'Payız'
+            }
+
+            
+        }
+    </script>
+</body>
+</html>
